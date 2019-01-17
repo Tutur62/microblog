@@ -1,5 +1,5 @@
 <?php
-include("includes/connexion.inc.php");
+include("connexion.inc.php");
 $date = time();
 if(isset($_COOKIE['utilisateur'])){
 if(isset($_GET['action'])){
@@ -19,4 +19,4 @@ $modifdata->execute();
 }
 }
 }
-header("Location: ./index.php");
+header("Location: ../index.php");

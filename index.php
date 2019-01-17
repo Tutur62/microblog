@@ -5,7 +5,7 @@ include("includes/haut.inc.php");
 <section>
         <div class="container">
             <div class="row">
-                <form action="message.php" method="post">
+                <form action="./includes/message.php" method="post">
                     <div class="col-sm-10">
                         <div class="form-group">
                     <?php
@@ -53,7 +53,7 @@ include("includes/haut.inc.php");
                         echo "<footer>".date("Y-m-d H:i",$data ['date'])."-".$data2['pseudo']."</footer>";
                         echo "<a href='index.php?id=".$data['id']."&action=modif' class='button'>Modifier</a>";
                         echo "<br>";
-                        echo "<a href='message.php?id=".$data['id']."&action=supprimer' class='button'>Supprimer</a>";
+                        echo "<a href='./includes/message.php?id=".$data['id']."&action=supprimer' class='button'>Supprimer</a>";
                         echo "<button class='jaime' data-id=".$data['id']." >J'aime - ".$data['nb_vote']."</button>";
                         echo "</blockquote>";
                         }
