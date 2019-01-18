@@ -14,10 +14,12 @@
                         echo "<blockquote>";
                         echo"<p>".htmlspecialchars($data['contenu'])."</p>";
                         echo "<footer>".date("Y-m-d H:i",$data ['date'])."-".$data2['pseudo']."</footer>";
+                        if(isset($_COOKIE['utilisateur'])){
                         echo "<a href='index.php?id=".$data['id']."&action=modif' class='button'>Modifier</a>";
                         echo "<br>";
                         echo "<a href='./includes/message.php?id=".$data['id']."&action=supprimer' class='button'>Supprimer</a>";
                         echo "<button class='vote' data-id=".$data['id']." >J'aime - ".$data['nb_vote']."</button>";
+                        }
                         echo "</blockquote>";
                         }
                     ?>
