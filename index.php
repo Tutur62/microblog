@@ -39,7 +39,13 @@ include("includes/haut.inc.php");
             </div>
 
             <div class="row">
-                <div class="col-md-12 messages">
+                <?php
+                $req = $pdo->prepare('select * from messages');
+                $req->BindParam(':id',$_GET['id']);
+                $req->execute();
+                $count = $req->rowCount()/7;
+                echo '<div class="col-md-12 messages" NbPage="'.$count.'">';
+                ?>
                 </div>
             </div>
             <div>

@@ -13,24 +13,17 @@ $(document).ready(function() {
           e.preventDefault();
         }
       });
-      $('.jaime').click(function(){
-        var data = $(this).attr('data-id');
-        var jaime = $(this);
-        $.ajax({
-            type: 'POST',
-            url: 'vote.php',
-            data: {id:data},
-            success: function(msg){
-            if(msg!="erreur"){
-            jaime.empty();
-            jaime.text("J'aime - "+msg);
-            }else{
-                alert("Vous avez votez trop de fois");
-            }
-            }
-        });
-    });
     function afficherpage(pages=0){
+        if(pages==0){
+            $(".page").eq(0).hide();
+        }else{
+            $(".page").eq(0).show();
+        }
+        if(pages+1>parseInt($(".messages").attr("nbpage"))){
+            $(".page").eq(1).hide();
+        }else{
+            $(".page").eq(1).show();
+        }
         $.ajax({
             type: 'POST',
             data : {page:pages},
@@ -50,4 +43,22 @@ $(document).ready(function() {
         }
         afficherpage(res)
     });
+    $(document).on('click', '.vote', function(){
+        console.log("test");
+      var data = $(this).attr('data-id');
+      var jaime = $(this);
+      $.ajax({
+          type: 'POST',
+          url: './includes/vote.php',
+          data: {id:data},
+          success: function(msg){
+          if(msg!="erreur"){
+          jaime.empty();
+          jaime.text("J'aime - "+msg);
+          }else{
+              alert("Vous avez votez trop de fois");
+          }
+          }
+      });
+  });
 });

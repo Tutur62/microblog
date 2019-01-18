@@ -10,7 +10,7 @@ include("includes/haut.inc.php");
     
     <div class="col-md-4">
       <section class="login-form">
-        <form method="post" action="connexion.php" role="login" id="connexion">
+        <form method="post" action="./includes/connexion.php" role="login" id="connexion">
           <input type="text" name="pseudo" placeholder="Pseudo" class="form-control input-lg" />
           <div class="red erreur" style="display:none">Le champ est vide</div>
           <input type="password" class="form-control input-lg" name="password" placeholder="Password"/>
@@ -30,23 +30,7 @@ include("includes/haut.inc.php");
 </div>
     </section>
 <?php
-if(isset($_POST['pseudo']) && isset($_POST['password'])){
-$pseudo=$_POST['pseudo'];
-$mdp=$_POST['password'];
-$query=$pdo->prepare('SELECT pseudo,id FROM utilisateur WHERE pseudo = :pseudo AND mdp = :mdp');
-$query->bindValue(':pseudo',$pseudo);
-$query->bindValue(':mdp',md5($mdp));
-$query->execute();
-$data=$query->fetch();
-$count = $query->rowCount();
-if($count==0){
-    header("location:connexion.php");
-}else{  $query->bindValue(':pseudo',$pseudo);
-  setcookie("utilisateur", $data['id'], time()+3600);
-  header("location:index.php");
-}
 include("includes/bas.inc.php");
-}
 ?>
 </body>
 
