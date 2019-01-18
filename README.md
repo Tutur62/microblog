@@ -15,14 +15,14 @@ Veuillez copier les fichiers dans la racine du serveur ou dans un dossier du vir
 
 ### Voici les deux tables : 
 
-#Utilisateur : id , mdp, pseudo,  role, SID.
-#Message : id, contenu, date , auteur_id, nb_vote, ip_vote.
+# Utilisateur : id , mdp, pseudo,  role, SID.
+# Message : id, contenu, date , auteur_id, nb_vote, ip_vote.
 
 ### Fonctionnalités
-*Ajout de message
-*Modification et suppression de messages
-*Connexion et déconnexion
-*Pagination
+* Ajout de message
+* Modification et suppression de messages
+* Connexion et déconnexion
+* Pagination
 ###
 ## Copyright and License
 
