@@ -1,9 +1,12 @@
 <?php
                     include("connexion.inc.php");
                     $tmp = $_POST["page"]*7;
+                    // Renvoie les messages paginés qui envoyés dans le code html
                     $query="SELECT * FROM messages group by date asc limit ".$tmp.",7";
                         $stmt=$pdo->query($query);
+                        //Parcours le tableau de message et affiche les informations
                         while($data=$stmt->fetch()){
+                        //Récupère l'id de l'auteur et selectionne le pseudo dans la table utilisateur
                         $query=$pdo->prepare('SELECT pseudo FROM utilisateur WHERE id = :auteur_id');
                         $query->bindValue(':auteur_id',$data['auteur_id']);
                         $query->execute();
