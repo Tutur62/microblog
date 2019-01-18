@@ -1,6 +1,6 @@
 <?php
-include("includes/connexion.inc.php");
-include("includes/haut.inc.php");
+include("./includes/connexion.inc.php");
+include("./includes/haut.inc.php");
 ?>
 <section>
         <div class="container">
@@ -60,7 +60,7 @@ include("includes/haut.inc.php");
         </div>
     </section>
 <?php
-include("includes/bas.inc.php");
+include("./includes/bas.inc.php");
 ?>
 </body>
 
