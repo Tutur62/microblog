@@ -1,5 +1,6 @@
 $(document).ready(function() {
     console.log( "ready!" );
+    afficherpage();
     $('#connexion').submit(function(e){
         if(!$('input').val()) {
             $('input').each(function(){
@@ -28,5 +29,25 @@ $(document).ready(function() {
             }
             }
         });
+    });
+    function afficherpage(pages=0){
+        $.ajax({
+            type: 'POST',
+            data : {page:pages},
+            url: './includes/affichermessage.php',
+            success: function(msg){
+            $(".messages").html(msg);
+            $(".messages").attr('page',pages);
+            }
+        });
+    }
+    $(".page").on('click',function(){
+        var res;
+        if($(this).attr("data-value")=="1"){
+            res = parseInt($(".messages").attr("page"))+1;
+        }else{
+            res = parseInt($(".messages").attr("page"))-1;
+        }
+        afficherpage(res)
     });
 });
