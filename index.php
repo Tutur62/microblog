@@ -1,6 +1,7 @@
 <?php
 include("./includes/connexion.inc.php");
 include("./includes/haut.inc.php");
+require './libs/Smarty.class.php';
 ?>
 <section>
         <div class="container">
@@ -25,17 +26,7 @@ include("./includes/haut.inc.php");
                     <div class="col-sm-2">
                         <!-- Change l'apparence du bouton et l'action à effectuer  -->
                         <?php
-                        if(isset($_GET['id'])&&isset($_GET['action'])){
-                        if($_GET['action']=="modif"){
-                            $action="Modifier";
-                            echo "<input name='action' type='hidden' value=".$action.">";
-                        }else{
-                            $action="envoyer";
-                        }
                         echo "<button type='submit' class='btn btn-success btn-lg'>".$action."</button>";
-                    }else{
-                        echo "<button type='submit' class='btn btn-success btn-lg'>Envoyer</button>";
-                    }
                         ?>
                     </div>
                 </form>
