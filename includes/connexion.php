@@ -16,7 +16,7 @@ if(isset($_POST['pseudo']) && isset($_POST['password'])){
 if($count==0){
     header("location: ../connexion.php");
 }else{  $query->bindValue(':pseudo',$pseudo);
-  setcookie("utilisateur", $data['id'], time()+3600);
+  setcookie("utilisateur", $data['id'], time()+10800);
   header("location: ../index.php");
 }
 }

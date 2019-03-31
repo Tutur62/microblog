@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-03-31 18:37:19
-  from 'C:\wamp64\www\microblog\templates\index.tpl' */
+/* Smarty version 3.1.33, created on 2019-03-31 15:34:59
+  from 'C:\wamp64\www\microblog\templates\connexion.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5ca108dfd580a5_43699423',
+  'unifunc' => 'content_5ca0de23a7c998_47070493',
   'has_nocache_code' => true,
   'file_dependency' => 
   array (
-    '36cf16ad38168fcfe33484b7d5d548548b11c05f' => 
+    '2c586b8d5f037079f4b01730a45f8ff223bbc40f' => 
     array (
-      0 => 'C:\\wamp64\\www\\microblog\\templates\\index.tpl',
-      1 => 1554057436,
+      0 => 'C:\\wamp64\\www\\microblog\\templates\\connexion.tpl',
+      1 => 1554046466,
       2 => 'file',
     ),
     'd16cd53e1f8da30038cec28361e13705c9de408c' => 
@@ -30,7 +30,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 3600,
 ),true)) {
-function content_5ca108dfd580a5_43699423 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ca0de23a7c998_47070493 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -110,70 +110,32 @@ console.log("Hello world");
         </div>
     </header>
 
-<body>
 <section>
-        <div class="container">
-            <div class="row">
-                <form action="./includes/message.php" method="post" enctype="multipart/form-data">
-                    <div class="col-sm-10">
-                        <div class="form-group">
-                    <?php if ($_smarty_tpl->tpl_vars['action']->value == 'Modifier') {?>
-                    <input name='id' type='hidden' value=<?php echo $_smarty_tpl->tpl_vars['modif']->value['id'];?>
->
-                    <!-- Selectionne l'id du message à modifier et le stock dans un champ caché -->
-                    <!-- Affiche le contenu qui va être modifier ou un champ vide en cas de nouveau message -->
-                    <textarea id='message' name='message' class='form-control' placeholder='Message'><?php echo $_smarty_tpl->tpl_vars['modif']->value['contenu'];?>
-</textarea>
-                    <?php } else { ?>
-                    <textarea id='message' name='message' class='form-control' placeholder='Message'></textarea>
-                    <?php }?>   
-                        </div>
-                    </div>
-                    <div class="col-sm-2">
-                    <input name="userfile" type="file" />
-                    <!-- Change l'apparence du bouton et l'action à effectuer  -->
-                    <button type='submit' class='btn btn-success btn-lg'><?php echo $_smarty_tpl->tpl_vars['action']->value;?>
-</button>
-                    </div>
-                </form>
-            </div>
-
-            <div class="row">
-                <!-- Récupère le nombre de page pour la pagination -->
-                <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['message']->value, 'myId', false, NULL, 'test', array (
-));
-if ($_from !== null) {
-foreach ($_from as $_smarty_tpl->tpl_vars['myId']->value) {
-?>
-                        <blockquote>
-                        <p><?php echo $_smarty_tpl->tpl_vars['myId']->value['contenu'];?>
-</p>
-                        <img src="./files/<?php echo $_smarty_tpl->tpl_vars['myId']->value['id'];?>
-_thump.jpg" />
-                        <footer><?php echo $_smarty_tpl->tpl_vars['myId']->value['pseudo'];?>
-</footer>
-                        <a href='index.php?id=<?php echo $_smarty_tpl->tpl_vars['myId']->value['id'];?>
-&action=modif' class='button'>Modifier</a>
-                        <br>
-                        <a href="./includes/message.php?action=supprimer&id=<?php echo $_smarty_tpl->tpl_vars['myId']->value['id'];?>
-" class='button'>Supprimer</a>
-                        <button class='jaime' data-id="<?php echo $_smarty_tpl->tpl_vars['myId']->value['id'];?>
-" >J'aime <?php echo $_smarty_tpl->tpl_vars['myId']->value['nb_vote'];?>
-</button>
-                        </blockquote>
-                  <?php
-}
-}
-$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-                </div>
-            </div>
-            <div>
-                <!-- Permet de changer de page, 0 signifiant précédent et 1 suivant -->
-                <button class="page" data-value="0">Précédente</button>
-                <button class="page" data-value="1">Suivante</button>
-            </div>
+        <<div class="container">
+  
+  <div class="row" id="pwd-container">
+    <div class="col-md-4"></div>
+    
+    <div class="col-md-4">
+      <section class="login-form">
+        <form method="post" action="./includes/connexion.php" role="login" id="connexion">
+          <input type="text" name="pseudo" placeholder="Pseudo" class="form-control input-lg" />
+          <div class="red erreur" style="display:none">Le champ est vide</div>
+          <input type="password" class="form-control input-lg" name="password" placeholder="Password"/>
+          <div class="red erreur" style="display:none">Le champ est vide</div>
+          <div class="pwstrength_viewport_progress"></div>
+          <br>
+          <button type="submit" name="go" class="btn btn-lg btn-primary btn-block">Connexion</button>
+        </form>
+        <div class="form-links">
         </div>
+      </section>  
+      </div>
+      <div class="col-md-4"></div>
+  </div>
+  <p>
+  </p>     
+</div>
     </section>
   <!-- Footer -->
   <footer class="text-center">
@@ -224,5 +186,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
     <!-- Theme JavaScript -->
     <script src="js/freelancer.min.js"></script>
-</body><?php }
+</body>
+
+</html><?php }
 }
