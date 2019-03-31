@@ -23,6 +23,8 @@ Veuillez copier les fichiers dans la racine du serveur ou dans un dossier du vir
 * Modification et suppression de messages
 * Connexion et déconnexion
 * Pagination
+* Ajout des images et redimensionnement de celles-ci
+* Ajout du moteur de template Smarty pour la page d'accueil et la connexion
 ###
 ## Copyright and License
 
