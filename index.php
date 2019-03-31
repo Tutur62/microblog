@@ -19,6 +19,7 @@ require './libs/Smarty.class.php';
                             echo "<input name='id' type='hidden' value=".$_GET['id'].">";
                         }
                     ?>
+                    <input type="file"> 
                     <!-- Affiche le contenu qui va être modifier ou un champ vide en cas de nouveau message -->
                     <textarea id='message' name='message' class='form-control' placeholder='Message'><?php if(isset($_GET['id'])){echo $data['contenu'];} ?></textarea>
                         </div>

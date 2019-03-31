@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-01-30 13:33:35
+/* Smarty version 3.1.33, created on 2019-03-31 09:51:37
   from 'C:\wamp64\www\microblog\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5c51a7af6ca6a0_26091249',
-  'has_nocache_code' => false,
+  'unifunc' => 'content_5ca08da90cead3_00212333',
+  'has_nocache_code' => true,
   'file_dependency' => 
   array (
     'd16cd53e1f8da30038cec28361e13705c9de408c' => 
     array (
       0 => 'C:\\wamp64\\www\\microblog\\templates\\header.tpl',
-      1 => 1548854794,
+      1 => 1554025889,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5c51a7af6ca6a0_26091249 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '3285092805c51a7af6c3ee2_08553282';
+function content_5ca08da90cead3_00212333 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '4975898285ca08da9016ff2_31771147';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -85,6 +85,13 @@ console.log("Hello world");
                 <ul class="nav navbar-nav navbar-right">
                     <li class="hidden">
                         <a href="#page-top"></a>
+                    </li>
+                    <li class='page-scroll'>
+                    <a href='includes/<?php echo '/*%%SmartyNocache:4975898285ca08da9016ff2_31771147%%*/<?php echo $_smarty_tpl->tpl_vars[\'connexion\']->value;?>
+/*/%%SmartyNocache:4975898285ca08da9016ff2_31771147%%*/';?>
+.php'><?php echo '/*%%SmartyNocache:4975898285ca08da9016ff2_31771147%%*/<?php echo $_smarty_tpl->tpl_vars[\'connexion\']->value;?>
+/*/%%SmartyNocache:4975898285ca08da9016ff2_31771147%%*/';?>
+</a>
                     </li>
                 </ul>
             </div>

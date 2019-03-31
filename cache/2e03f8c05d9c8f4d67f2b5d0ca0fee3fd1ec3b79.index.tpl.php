@@ -1,24 +1,24 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-02-27 14:57:29
+/* Smarty version 3.1.33, created on 2019-03-31 09:51:37
   from 'C:\wamp64\www\microblog\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5c76a5592ae1c7_01039748',
+  'unifunc' => 'content_5ca08da9152729_77126726',
   'has_nocache_code' => true,
   'file_dependency' => 
   array (
     '36cf16ad38168fcfe33484b7d5d548548b11c05f' => 
     array (
       0 => 'C:\\wamp64\\www\\microblog\\templates\\index.tpl',
-      1 => 1551279445,
+      1 => 1553508641,
       2 => 'file',
     ),
     'd16cd53e1f8da30038cec28361e13705c9de408c' => 
     array (
       0 => 'C:\\wamp64\\www\\microblog\\templates\\header.tpl',
-      1 => 1548854794,
+      1 => 1554025889,
       2 => 'file',
     ),
     '766949b83847faf019cd57421efe7caadd436889' => 
@@ -30,7 +30,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 3600,
 ),true)) {
-function content_5c76a5592ae1c7_01039748 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ca08da9152729_77126726 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -84,6 +84,11 @@ console.log("Hello world");
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
+                    <li class='page-scroll'>
+                    <a href='includes/<?php echo $_smarty_tpl->tpl_vars['connexion']->value;?>
+.php'><?php echo $_smarty_tpl->tpl_vars['connexion']->value;?>
+</a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -109,7 +114,7 @@ console.log("Hello world");
 <section>
         <div class="container">
             <div class="row">
-                <form action="./includes/message.php" method="post">
+                <form action="./includes/message.php" method="post" enctype="multipart/form-data">
                     <div class="col-sm-10">
                         <div class="form-group">
                             <!-- Selectionne l'id du message à modifier et le stock dans un champ caché -->
@@ -118,7 +123,8 @@ console.log("Hello world");
                         </div>
                     </div>
                     <div class="col-sm-2">
-                        <!-- Change l'apparence du bouton et l'action à effectuer  -->
+                    <input name="userfile" type="file" />
+                    <!-- Change l'apparence du bouton et l'action à effectuer  -->
                     <button type='submit' class='btn btn-success btn-lg'><?php echo $_smarty_tpl->tpl_vars['action']->value;?>
 </button>
                     </div>
@@ -128,21 +134,22 @@ console.log("Hello world");
             <div class="row">
                 <!-- Récupère le nombre de page pour la pagination -->
                 <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['message']->value, 'i', false, 'myId');
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['message']->value, 'myId');
 if ($_from !== null) {
-foreach ($_from as $_smarty_tpl->tpl_vars['myId']->value => $_smarty_tpl->tpl_vars['i']->value) {
+foreach ($_from as $_smarty_tpl->tpl_vars['myId']->value) {
 ?>
                         <blockquote>
-                        <p><?php echo $_smarty_tpl->tpl_vars['i']->value;?>
+                        <p><?php echo $_smarty_tpl->tpl_vars['myId']->value['contenu'];?>
 </p>
-                        <footer><?php echo $_smarty_tpl->tpl_vars['i']->value;?>
+                        <footer><?php echo $_smarty_tpl->tpl_vars['myId']->value['auteur_id'];?>
 </footer>
                         <a href='index.php?id=<?php echo $_smarty_tpl->tpl_vars['myId']->value['id'];?>
 ' class='button'>Modifier</a>
                         <br>
-                        <a href="message.php?id=<?php echo $_smarty_tpl->tpl_vars['myId']->value['id'];?>
-&action=supprimer" class='button'>Supprimer</a>
-                        <button class='jaime' data-id=".$data['id']." >J'aime</button>
+                        <a href="message.php?action=supprimer&id=<?php echo $_smarty_tpl->tpl_vars['myId']->value['id'];?>
+" class='button'>Supprimer</a>
+                        <button class='jaime' data-id="<?php echo $_smarty_tpl->tpl_vars['myId']->value['id'];?>
+" >J'aime</button>
                         </blockquote>
                   <?php
 }

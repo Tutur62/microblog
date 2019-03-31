@@ -1,6 +1,6 @@
 <?php
 
-define('TARGET', '/files/');    
+define('TARGET', './files/');    
 define('MAX_SIZE', 100000);    
 define('WIDTH_MAX', 800);    
 define('HEIGHT_MAX', 800);   
