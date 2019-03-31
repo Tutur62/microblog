@@ -1,24 +1,24 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-03-31 18:37:19
+/* Smarty version 3.1.33, created on 2019-03-31 19:35:50
   from 'C:\wamp64\www\microblog\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5ca108dfd580a5_43699423',
+  'unifunc' => 'content_5ca116968a16e3_51463332',
   'has_nocache_code' => true,
   'file_dependency' => 
   array (
     '36cf16ad38168fcfe33484b7d5d548548b11c05f' => 
     array (
       0 => 'C:\\wamp64\\www\\microblog\\templates\\index.tpl',
-      1 => 1554057436,
+      1 => 1554060947,
       2 => 'file',
     ),
     'd16cd53e1f8da30038cec28361e13705c9de408c' => 
     array (
       0 => 'C:\\wamp64\\www\\microblog\\templates\\header.tpl',
-      1 => 1554025889,
+      1 => 1554058496,
       2 => 'file',
     ),
     '766949b83847faf019cd57421efe7caadd436889' => 
@@ -30,7 +30,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 3600,
 ),true)) {
-function content_5ca108dfd580a5_43699423 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ca116968a16e3_51463332 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -85,7 +85,7 @@ console.log("Hello world");
                         <a href="#page-top"></a>
                     </li>
                     <li class='page-scroll'>
-                    <a href='includes/<?php echo $_smarty_tpl->tpl_vars['connexion']->value;?>
+                    <a href='<?php echo $_smarty_tpl->tpl_vars['connexion']->value;?>
 .php'><?php echo $_smarty_tpl->tpl_vars['connexion']->value;?>
 </a>
                     </li>
@@ -140,17 +140,19 @@ console.log("Hello world");
 
             <div class="row">
                 <!-- Récupère le nombre de page pour la pagination -->
+                <div class="col-md-12 messages" NbPage=<?php echo $_smarty_tpl->tpl_vars['count']->value;?>
+ page="0">
                 <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['message']->value, 'myId', false, NULL, 'test', array (
 ));
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['myId']->value) {
 ?>
-                        <blockquote>
+                        <blockquote class="blocmessage">
                         <p><?php echo $_smarty_tpl->tpl_vars['myId']->value['contenu'];?>
 </p>
                         <img src="./files/<?php echo $_smarty_tpl->tpl_vars['myId']->value['id'];?>
-_thump.jpg" />
+_thump.jpg" onerror="this.style.display='none'"/>
                         <footer><?php echo $_smarty_tpl->tpl_vars['myId']->value['pseudo'];?>
 </footer>
                         <a href='index.php?id=<?php echo $_smarty_tpl->tpl_vars['myId']->value['id'];?>
@@ -161,11 +163,13 @@ _thump.jpg" />
                         <button class='jaime' data-id="<?php echo $_smarty_tpl->tpl_vars['myId']->value['id'];?>
 " >J'aime <?php echo $_smarty_tpl->tpl_vars['myId']->value['nb_vote'];?>
 </button>
+                        
                         </blockquote>
                   <?php
 }
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+                  </div>
                 </div>
             </div>
             <div>

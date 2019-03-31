@@ -43,12 +43,20 @@ $smarty->assign(
     $connexion,
     true
 ); 
-$query="SELECT * ,(select pseudo from utilisateur where utilisateur.id = messages.auteur_id) as pseudo FROM messages order by date desc";
+$query="SELECT * ,(select pseudo from utilisateur where utilisateur.id = messages.auteur_id) as pseudo FROM messages order by date desc limit 7";
 $stmt=$pdo->query($query);
 $data=$stmt->fetchAll();
-    $smarty->assign(
+$smarty->assign(
         "message",
         $data,
         true
-    );   
+);
+$req = $pdo->prepare('select * from messages');
+$req->execute();
+$count = $req->rowCount()/7;
+$smarty->assign(
+    "count",
+    $count,
+    true
+); 
 $smarty->display('index.tpl');

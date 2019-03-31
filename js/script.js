@@ -1,6 +1,5 @@
 $(document).ready(function() {
     console.log( "ready!" );
-    afficherpage();
     $('#connexion').submit(function(e){
         if(!$('input').val()) {
             $('input').each(function(){
@@ -31,6 +30,9 @@ $(document).ready(function() {
             success: function(msg){
             $(".messages").html(msg);
             $(".messages").attr('page',pages);
+                document.querySelectorAll('img').forEach(function(img){
+                   img.onerror = function(){this.style.display='none';};
+                })
             }
         });
     }
@@ -43,7 +45,7 @@ $(document).ready(function() {
         }
         afficherpage(res)
     });
-    $(document).on('click', '.vote', function(){
+    $(document).on('click', '.jaime', function(){
         console.log("test");
       var data = $(this).attr('data-id');
       var jaime = $(this);

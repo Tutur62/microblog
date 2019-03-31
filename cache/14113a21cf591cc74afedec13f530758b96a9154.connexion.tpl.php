@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-03-31 15:34:59
+/* Smarty version 3.1.33, created on 2019-03-31 18:56:55
   from 'C:\wamp64\www\microblog\templates\connexion.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5ca0de23a7c998_47070493',
+  'unifunc' => 'content_5ca10d77c75f43_40351840',
   'has_nocache_code' => true,
   'file_dependency' => 
   array (
@@ -18,7 +18,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'd16cd53e1f8da30038cec28361e13705c9de408c' => 
     array (
       0 => 'C:\\wamp64\\www\\microblog\\templates\\header.tpl',
-      1 => 1554025889,
+      1 => 1554058496,
       2 => 'file',
     ),
     '766949b83847faf019cd57421efe7caadd436889' => 
@@ -30,7 +30,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 3600,
 ),true)) {
-function content_5ca0de23a7c998_47070493 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ca10d77c75f43_40351840 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -85,7 +85,7 @@ console.log("Hello world");
                         <a href="#page-top"></a>
                     </li>
                     <li class='page-scroll'>
-                    <a href='includes/<?php echo $_smarty_tpl->tpl_vars['connexion']->value;?>
+                    <a href='<?php echo $_smarty_tpl->tpl_vars['connexion']->value;?>
 .php'><?php echo $_smarty_tpl->tpl_vars['connexion']->value;?>
 </a>
                     </li>
