@@ -1,36 +1,36 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-03-31 19:35:50
+/* Smarty version 3.1.33, created on 2019-04-03 18:21:26
   from 'C:\wamp64\www\microblog\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5ca116968a16e3_51463332',
+  'unifunc' => 'content_5ca4f9a6ad3fe9_19554328',
   'has_nocache_code' => true,
   'file_dependency' => 
   array (
     '36cf16ad38168fcfe33484b7d5d548548b11c05f' => 
     array (
       0 => 'C:\\wamp64\\www\\microblog\\templates\\index.tpl',
-      1 => 1554060947,
+      1 => 1554068292,
       2 => 'file',
     ),
     'd16cd53e1f8da30038cec28361e13705c9de408c' => 
     array (
       0 => 'C:\\wamp64\\www\\microblog\\templates\\header.tpl',
-      1 => 1554058496,
+      1 => 1554313705,
       2 => 'file',
     ),
     '766949b83847faf019cd57421efe7caadd436889' => 
     array (
       0 => 'C:\\wamp64\\www\\microblog\\templates\\footer.tpl',
-      1 => 1548854897,
+      1 => 1554315631,
       2 => 'file',
     ),
   ),
   'cache_lifetime' => 3600,
 ),true)) {
-function content_5ca116968a16e3_51463332 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ca4f9a6ad3fe9_19554328 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -47,6 +47,7 @@ function content_5ca116968a16e3_51463332 (Smarty_Internal_Template $_smarty_tpl)
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Theme CSS -->
     <link href="css/freelancer.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -124,13 +125,18 @@ console.log("Hello world");
                     <!-- Affiche le contenu qui va être modifier ou un champ vide en cas de nouveau message -->
                     <textarea id='message' name='message' class='form-control' placeholder='Message'><?php echo $_smarty_tpl->tpl_vars['modif']->value['contenu'];?>
 </textarea>
-                    <?php } else { ?>
-                    <textarea id='message' name='message' class='form-control' placeholder='Message'></textarea>
-                    <?php }?>   
-                        </div>
+                       </div>
                     </div>
                     <div class="col-sm-2">
-                    <input name="userfile" type="file" />
+                    <input name="userfile" type="file"/>
+                    <?php } else { ?>
+                    <textarea id='message' name='message' class='form-control' placeholder='Message'></textarea>
+                       </div>
+                    </div>
+                    <div class="col-sm-2">
+                    <input name="userfile" type="file" required/>
+                    <?php }?>   
+                
                     <!-- Change l'apparence du bouton et l'action à effectuer  -->
                     <button type='submit' class='btn btn-success btn-lg'><?php echo $_smarty_tpl->tpl_vars['action']->value;?>
 </button>
@@ -152,7 +158,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['myId']->value) {
                         <p><?php echo $_smarty_tpl->tpl_vars['myId']->value['contenu'];?>
 </p>
                         <img src="./files/<?php echo $_smarty_tpl->tpl_vars['myId']->value['id'];?>
-_thump.jpg" onerror="this.style.display='none'"/>
+_thump" onerror="this.style.display='none'"/>
                         <footer><?php echo $_smarty_tpl->tpl_vars['myId']->value['pseudo'];?>
 </footer>
                         <a href='index.php?id=<?php echo $_smarty_tpl->tpl_vars['myId']->value['id'];?>
@@ -174,7 +180,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             </div>
             <div>
                 <!-- Permet de changer de page, 0 signifiant précédent et 1 suivant -->
-                <button class="page" data-value="0">Précédente</button>
+                <button class="page" data-value="0" style="display: none;">Précédente</button>
                 <button class="page" data-value="1">Suivante</button>
             </div>
         </div>
@@ -202,8 +208,11 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         <div class="footer-below">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12">
-                        Copyright &copy; Your Website 2016
+                    <div class="col-lg-12 center">
+                        <div class="center title">Réseaux Sociaux</div>
+                       <a href="#" title="L'édito" id="twitter" class="center"><span></span></a>
+                       <a href="#" title="L'édito" id="facebook" class="center"><span></span></a>
+                       <a href="#" title="L'édito" id="youtube" class="center"><span></span></a>
                     </div>
                 </div>
             </div>

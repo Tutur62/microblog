@@ -21,8 +21,11 @@
         <div class="footer-below">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12">
-                        Copyright &copy; Your Website 2016
+                    <div class="col-lg-12 center">
+                        <div class="center title">Réseaux Sociaux</div>
+                       <a href="#" title="L'édito" id="twitter" class="center"><span></span></a>
+                       <a href="#" title="L'édito" id="facebook" class="center"><span></span></a>
+                       <a href="#" title="L'édito" id="youtube" class="center"><span></span></a>
                     </div>
                 </div>
             </div>

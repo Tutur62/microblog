@@ -17,7 +17,7 @@ $query="SELECT id FROM messages group by date desc";
 $stmt=$pdo->query($query);
 $data=$stmt->fetch();
 //ezrtbhhtrhe
-if(is_array($_FILES)) {
+if(is_array($_FILES['userfile']['name'] == "")) {
     $file = $_FILES['userfile']['tmp_name']; 
     $sourceProperties = getimagesize($file);
     $fileNewName = $data["id"] ;

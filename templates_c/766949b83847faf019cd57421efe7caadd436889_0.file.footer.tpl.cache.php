@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-01-30 13:33:35
+/* Smarty version 3.1.33, created on 2019-04-03 18:21:26
   from 'C:\wamp64\www\microblog\templates\footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5c51a7af735255_45448313',
+  'unifunc' => 'content_5ca4f9a6a92303_74338028',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '766949b83847faf019cd57421efe7caadd436889' => 
     array (
       0 => 'C:\\wamp64\\www\\microblog\\templates\\footer.tpl',
-      1 => 1548854897,
+      1 => 1554315631,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5c51a7af735255_45448313 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '15556372765c51a7af730425_55510437';
+function content_5ca4f9a6a92303_74338028 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '11950594535ca4f9a6a5eaa7_99961855';
 ?>
   <!-- Footer -->
   <footer class="text-center">
@@ -46,8 +46,11 @@ $_smarty_tpl->compiled->nocache_hash = '15556372765c51a7af730425_55510437';
         <div class="footer-below">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12">
-                        Copyright &copy; Your Website 2016
+                    <div class="col-lg-12 center">
+                        <div class="center title">Réseaux Sociaux</div>
+                       <a href="#" title="L'édito" id="twitter" class="center"><span></span></a>
+                       <a href="#" title="L'édito" id="facebook" class="center"><span></span></a>
+                       <a href="#" title="L'édito" id="youtube" class="center"><span></span></a>
                     </div>
                 </div>
             </div>

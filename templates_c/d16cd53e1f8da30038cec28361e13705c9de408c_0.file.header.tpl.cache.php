@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-03-31 18:55:00
+/* Smarty version 3.1.33, created on 2019-04-03 17:51:45
   from 'C:\wamp64\www\microblog\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5ca10d0482b4a2_15640055',
+  'unifunc' => 'content_5ca4f2b18c4e90_12066795',
   'has_nocache_code' => true,
   'file_dependency' => 
   array (
     'd16cd53e1f8da30038cec28361e13705c9de408c' => 
     array (
       0 => 'C:\\wamp64\\www\\microblog\\templates\\header.tpl',
-      1 => 1554058496,
+      1 => 1554313705,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ca10d0482b4a2_15640055 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '5269561235ca10d047da391_94214376';
+function content_5ca4f2b18c4e90_12066795 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '14920631985ca4f2b18b70b8_16078497';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -39,6 +39,7 @@ $_smarty_tpl->compiled->nocache_hash = '5269561235ca10d047da391_94214376';
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Theme CSS -->
     <link href="css/freelancer.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <?php echo '<script'; ?>
  src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"><?php echo '</script'; ?>
 >
@@ -87,10 +88,10 @@ console.log("Hello world");
                         <a href="#page-top"></a>
                     </li>
                     <li class='page-scroll'>
-                    <a href='<?php echo '/*%%SmartyNocache:5269561235ca10d047da391_94214376%%*/<?php echo $_smarty_tpl->tpl_vars[\'connexion\']->value;?>
-/*/%%SmartyNocache:5269561235ca10d047da391_94214376%%*/';?>
-.php'><?php echo '/*%%SmartyNocache:5269561235ca10d047da391_94214376%%*/<?php echo $_smarty_tpl->tpl_vars[\'connexion\']->value;?>
-/*/%%SmartyNocache:5269561235ca10d047da391_94214376%%*/';?>
+                    <a href='<?php echo '/*%%SmartyNocache:14920631985ca4f2b18b70b8_16078497%%*/<?php echo $_smarty_tpl->tpl_vars[\'connexion\']->value;?>
+/*/%%SmartyNocache:14920631985ca4f2b18b70b8_16078497%%*/';?>
+.php'><?php echo '/*%%SmartyNocache:14920631985ca4f2b18b70b8_16078497%%*/<?php echo $_smarty_tpl->tpl_vars[\'connexion\']->value;?>
+/*/%%SmartyNocache:14920631985ca4f2b18b70b8_16078497%%*/';?>
 </a>
                     </li>
                 </ul>
